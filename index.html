@@ -49,8 +49,9 @@
 					<p style="color: #ff9999;"><small>See this presentation on your device: <a href="http://xipasduarte.github.io/h2o-solute" title="H2O Solute Presentation">http://xipasduarte.github.io/h2o-solute</a></small></p>
 
 					<aside class="notes">
-						<p>Thank the jury for being present, in particular Prof. Luís Martins that had to travel for the occasion.</p>
-						<p>Present yourself amd start the presentation with a note using the title.</p>
+						<p>Agradecer ao júri, em particular ao Prof. Luís Martins.</p>
+						<p>Apresenta-te e começa a apresentação com o título da tese.</p>
+						<p>Explicar o modelo da apresentação: introduzir o sistema, estrutura e energia.</p>
 					</aside>
 				</section>
 
@@ -60,31 +61,34 @@
 						<img src="assets/phases.jpg" alt="Water and hexane simulation.">
 						<ul>
 							<li>Non-ideal with vast ranges of immiscibility.</li>
-							<li>Two phases (and an interphase).</li>
+							<li>Two phases (and an interface).</li>
 						</ul>
 
 						<aside class="notes">
-							<p>These systems need to be considered as a hole to be fully understood.<p>
+							<p>Estes sistemas devem ser considerados como um todo quando estudados.<p>
 						</aside>
 					</section>
 					<section>
 						<h2>Water Rich Phase</h2>
 						<img src="assets/hydrogen-bonds.png" alt="Hydrogen Bonds" width="400px">
 						<ul>
-							<li>This side of the system is widely stydied and is of great importance to the biological sciences.</li>
-							<li>The solvation process is governed by entropic variations of energy.</li>
+							<li>Great importance for environmental and biological sciences.</li>
+							<li>The solvation process is entropically governed.</li>
 						</ul>
+						<aside class="notes">
+							<p>Descrever mecanismo de solvatação. 1) cadeia 3D de pontes disruptida. 2) água posiciona-se com menor liberdade na superfície. 3) aumento de entropia proporcional à superfície.</p>
+						</aside>
 					</section>
 					<section>
 						<h2>Hydrocarbon Rich Phase</h2>
 						<img src="assets/dispersion-forces.png" alt="Dispersion Forces" width="400px">
 						<ul>
-							<li>Solvation process not so well understood as the other phase.</li>
-							<li>Inconsistent data on the literature for the solubility values.</li>
+							<li>Scattered data on the literature for the solubility values.</li>
+							<li>Water loses its hydrogen bonding ability.</li>
 						</ul>
-						<p>This is the work's foccus by means of Molecular Dynamics (MD) simulations.</p>
+						<p class="fragment">This is the work's focus, using MD simulations.</p>
 						<aside class="notes">
-							<p>This work is related to experimental data available from previous work in the group.</p>
+							<p>Interacções dipolo-dipolo induzido e dipolo instantâneo-dipolo induzido.</p>
 						</aside>
 					</section>
 				</section>
@@ -92,17 +96,82 @@
 				<section>
 					<h2>Simulations</h2>
 					<ul>
-						<li>n-Alkanes from hexane to hexadecane: H6, H7, H9, H11, H13 and H16.</li>
-						<li>Two temperatures: 298.15 K and 0.538 reduced temperature.</li>
+						<li>Fully MD atomistic simulations.</li>
+						<li>Six n-Alkanes: H6, H7, H9, H11, H13 and H16</li>
+						<li>Two temperatures: 298.15 K and 0.538 (Tr)</li>
 					</ul>
+					<table>
+						<thead style="font-size: .9em;">
+							<tr>
+								<th>Solvent</th>
+								<th>ρ / kg.m<sup>-3</sup></th>
+								<th>ρ<sub>r</sub> / kg.m<sup>-3</sup></th>
+								<th>σ / %</th>
+								<th>σ<sub>r</sub> / %</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>n-Hexane</td>
+								<td>645.9</td>
+								<td>673.7</td>
+								<td>-1.37</td>
+								<td>-0.50</td>
+							</tr>
+							<tr>
+								<td>n-Heptane</td>
+								<td>673.6</td>
+								<td>678.5</td>
+								<td>-0.87</td>
+								<td>-1.05</td>
+							</tr>
+							<tr>
+								<td>n-Nonane</td>
+								<td>707.6</td>
+								<td>687.3</td>
+								<td>-1.44</td>
+								<td>-1.35</td>
+							</tr>
+							<tr>
+								<td>n-Undecane</td>
+								<td>731.4</td>
+								<td>690.8</td>
+								<td>-1.16</td>
+								<td>-1.65</td>
+							</tr>
+							<tr>
+								<td>n-Tridecane</td>
+								<td>750.1</td>
+								<td>692.8</td>
+								<td>-0.78</td>
+								<td>-1.78</td>
+							</tr>
+							<tr>
+								<td>n-Hexadecane</td>
+								<td>769.0</td>
+								<td>693.1</td>
+								<td>-0.13</td>
+								<td>-1.95</td>
+							</tr>
+						</tbody>
+					</table>
+					<aside class="notes">
+						<p>Force-fields usados: L-OPLS, SPC/E; Pressão 1atm, Nose-Hoover barostato e termoestato.</p>
+					</aside>
 				</section>
 
 				<section>
 					<section>
-						<h2>Struture - RDFs</h2>
+						<h2>Structure</h2>
+						<aside class="notes">
+							<p class="small">O resto da apresentação divide-se em estrutura e energia. Sendo que há ligações e que eu tentarei fazer sempre ponte entre informações.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>RDFs: Water-CT and Water-CS</h3>
 						<img src="assets/oh-rdf.svg" alt="Water (O) Radial Distribution Functions">
 						<aside class="notes">
-							<p>Radial distribution functions (RDFs) were calculated for all systems. RDFs foccus on the methyl (CH<sub>3</sub>) and methelene (CH<sub>2</sub>) portions of each molecule, with each carbon being the refeence particle.</p>
+							<p>RDFs para todos os sistemas; O-CT e O-CS;</p>
 							<ul>
 								<li>We see the presence of methyl groups closer to the water molecule than any methylene group.</li>
 								<li>CH<sub>3</sub> seems to be dominant in the first coordination sphere.</li>
@@ -111,13 +180,20 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Struture - Ratios</h2>
+						<h3>Ratios: X<sub>CH3</sub>local/X<sub>CH3</sub>bulk</h3>
 						<img src="assets/oh-ratio.svg" alt="Local over bulk numeric concentrations of CH3">
 						<aside class="notes">
-							<ul>
-								<li>For all solvents we see higher numeric concentrations of CH<sub>3</sub> relative to the bulk.</li>
-								<li>Indication of solute preference for the terminal groups of the solvent.</li>
-							</ul>
+							<p>Vemos que o número de CH3 é maior a distância próximas do soluto face à quantidade global. E que é isto se verifica para distâncias maiores, em geral, com o aumento da cadeia.</p>
+							<p>Mais uma vez, há uma preferência entre o soluto e os grupos terminais do alcano.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Ratios for CT RDFs</h2>
+						<img src="assets/ct-ratio.svg" alt="Local over bulk numeric concentrations of CH3">
+						<aside class="notes">
+							<p>A estrutura dos alcanos parece já apresentar zonas com concentrações de grupos metilo superiores à global.</p>
+							<p>Advertir: estes dados são retirados das simulações com o soluto considerando-se a sua presença negligenciável.</p>
+							<p>Mais uma vez verifica-se a variação da interacção com o cumprimento da cadeia.</p>
 						</aside>
 					</section>
 					<section>
@@ -133,6 +209,44 @@
 						</aside>
 					</section>
 				</section>
+
+				<section>
+					<section>
+						<h2>Energy</h2>
+					</section>
+					<section>
+						<h3>Interaction Energy (Simulations)</h3>
+						<img src="assets/energy.svg" alt="Interaction Energy">
+						<aside class="notes">
+							<p>A energia a temperatura contante cresce com o aumento da cadeia, ao contrário da concentração de CH3. Efeito dominante: possivelmente a densidade.</p>
+							<p>Para Tr temos o oposto que, assumindo ser efeito da concentração a 298K, será por estarmos num estado térmico idêntico e a concentração de CH3 dominar as interacções.</p>
+							<p>De forma a comparar com dados experimentais de entalpia de solvatação, calcularam-se energias de formação de cavidade para determinar a Ei nos resultados experimentais.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Comparison with experimental data</h3>
+						<img src="assets/energy-hc.svg" alt="Interaction Energy Comparison with Experimental Results">
+						<aside class="notes">
+							<p>Verificamos que a tendência global parece ser idêntica com a energia a aumentar com o comprimento da cadeia.</p>
+							<p>A diferença entre os valores pode dever-se a:<br>simulações não optimizadas para valores de Ei<br>sobre-estimação das entalpias de cavidade (indica que eventualmente podem haver já espaços no solvente - isto liga-se com a existência de cavidades vistas nas CT Rdfs).</p>
+							<p><strong>Nota:</strong> energia com cavidade - valores semelhantes, variação pequena comparada com a variação das entalpias e valores pioram muito com a consideração da cavidade (sugere que talvez haja espaço e não seja necessária tanta energia para inserir o soluto)</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Obrigado</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>Extras</h2>
+					</section>
+					<section>
+						<h3>Interaction energy with group density</h3>
+					</section>
+				</section>
+
 <!--
 				<section>
 					<section id="fragments">

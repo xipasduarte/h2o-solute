@@ -1239,41 +1239,6 @@
           </g>
         </g>
       </g>
-      <g
-         id="g7190">
-        <g
-           id="g7192"
-           clip-path="url(#clipPath7194)">
-          <g
-             id="g7198"
-             transform="matrix(7.874016e-5,0,0,-7.874016e-5,624.5792,299.0201)">
-            <path
-               d="M 0.1401367,-0.02319336 320040.3,1.139526"
-               style="fill:none;stroke:#000000;stroke-width:12700;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:38101.27, 50801.27;stroke-dashoffset:0;stroke-opacity:1"
-               id="path7200" />
-          </g>
-        </g>
-      </g>
-      <g
-         id="g7202">
-        <g
-           id="g7204"
-           clip-path="url(#clipPath7206)">
-          <g
-             id="g7210"
-             transform="translate(652.4293,305.1226)">
-            <text
-               transform="matrix(1,0,0,-1,0,-10)"
-               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text7212">
-              <tspan
-                 x="0 4.5949998 9.5699997 13.055 15.35 20.325001 24.24 29.305"
-                 y="0"
-                 id="tspan7214">Series7</tspan>
-            </text>
-          </g>
-        </g>
-      </g>
     </g>
   </g>
 </svg>
